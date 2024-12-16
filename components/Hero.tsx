@@ -4,6 +4,8 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { socialMedia } from "@/data";
+
+
 const handleDownload = () => {
   const link = document.createElement("a");
   link.href =

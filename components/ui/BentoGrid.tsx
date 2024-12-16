@@ -6,7 +6,7 @@ import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
-import { BackgroundGradientAnimation } from "./GradientBg";
+
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
@@ -75,14 +75,14 @@ export const BentoGridItem = ({
     },
   };
 
-  const handleCopy = () => {
-    // const text = "hsu@jsmastery.pro";
-    // navigator.clipboard.writeText(text);
-    // setCopied(true);
+  // const handleCopy = () => {
+  //   // const text = "hsu@jsmastery.pro";
+  //   // navigator.clipboard.writeText(text);
+  //   // setCopied(true);
 
-    const file_url =
-      "https://drive.google.com/drive/folders/1vv3aqKFzZRYDD2oEB6t7cAhPNqcsNLbV";
-  };
+  //   const file_url =
+  //     "https://drive.google.com/drive/folders/1vv3aqKFzZRYDD2oEB6t7cAhPNqcsNLbV";
+  // };
 
   return (
     <div
@@ -210,13 +210,13 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <MagicButton
+              {/* <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
                 otherClasses="!bg-[#161A31]"
-              />
+              /> */}
             </div>
           )}
         </div>

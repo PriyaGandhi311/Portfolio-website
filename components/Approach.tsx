@@ -1,38 +1,36 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { BackgroundGradientAnimation } from "./ui/GradientBg";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section id="projects" className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        My <span className="text-purple">Projects</span>
       </h1>
+
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
-        >
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-            containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
-          />
-        </Card>
+          title=""
+          icon={
+            <AceternityIcon
+              order="
+            Evaluating the influence of text representation techniques on diverse machine learning algorithms for stress detection in social media users"
+            />
+          }
+          des="Social media platforms like Twitter, Facebook, and Instagram reveal insights into users' mental health due to the anonymity of online interactions. This study examines the effectiveness of TF-IDF and Bag-of-Words (BoW) for stress detection in textual data. Various machine learning algorithms and deep learning models—SVM, Random Forest, Logistic Regression, Naive Bayes, RNN, LSTM, RoBERTa, and BERT embeddings—are evaluated using datasets from Reddit and Twitter. The research aims to optimize stress detection systems by assessing how TF-IDF and BoW impact classifier performance."
+        ></Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title=""
+          icon={
+            <AceternityIcon order="Neurodegenerative Disease Detection using Deep Convolutional GANs and CNN" />
+          }
+          des="Conceptualized and implemented a solution using the MobileNetV2 CNN model to generate synthetic images for early-stage diagnosis of four neurodegenerative diseases, and co-authored a paper on this solution, which was accepted at the 8th IEEE International Conference for Convergence of Technology 2023 (ISSN: 979-8-3503-3401-2)."
         >
-          <CanvasRevealEffect
+          {/* <CanvasRevealEffect
             animationSpeed={3}
             // change bg-black to bg-pink-900
             containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
@@ -42,23 +40,31 @@ const Approach = () => {
               [221, 255, 247],
             ]}
             dotSize={2}
-          />
+          /> */}
           {/* Radial gradient for the cute fade */}
           {/* remove this one */}
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
           title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          icon={<AceternityIcon order="Multimodal Single Cell Integration" />}
+          des="Devised a solution to predict the modalities like DNA, RNA, and Proteins at single-cell level using Neural Networks. Pre-processed the huge data using SVD dimensionality reduction technique and then using gelu activation function for dense neural layers predicted the covariance of modalities, offering valuable insights for diagnosing various carcinogenic diseases. "
         >
-          <CanvasRevealEffect
+          {/* <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
             colors={[[125, 211, 252]]}
-          />
+          /> */}
+        </Card>
+        <Card
+          title="" 
+          icon={<AceternityIcon order="Quick Response Coding Approach for drug traceability" />}
+          des="Proposed an algorithm in Solidity language for the simplified
+          traceability of drug and other medicinal products in the supply chain.
+          Authored a chapter for the simplified traceability of drug and other
+          medicinal products in the supply chain in the book titled “Unleashing
+          Potentials of Blockchain Technology for Healthcare Industries”
+          published by Elsevier with Scopus index and ISBN: 978-0-323-99481-1">
         </Card>
       </div>
     </section>
