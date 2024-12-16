@@ -4,10 +4,16 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { socialMedia } from "@/data";
-
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href =
+    '"https://drive.google.com/drive/folders/1vv3aqKFzZRYDD2oEB6t7cAhPNqcsNLbV";';
+  link.download = "Priya_Gandhi_Resume.pdf";
+  link.click();
+};
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div id="about" className="pb-20 pt-36">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -79,13 +85,15 @@ const Hero = () => {
               </div>
             ))}
           </div>
-          {/* <a href="#about">
+          <a href="#about">
             <MagicButton
               title="Download my Resume"
               icon={<FaLocationArrow />}
               position="right"
+              handleClick={handleDownload}
+              otherClasses="!bg-[#161A31]"
             />
-          </a> */}
+          </a>
         </div>
       </div>
     </div>

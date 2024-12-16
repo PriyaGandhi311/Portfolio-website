@@ -1,71 +1,33 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Education", link: "#education" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
+    degree: "Bachelor of Technology, Computer Engineering",
+    schoolName: "Dwarkadas J. Sanghvi College of Engineering",
+    location: "Mumbai, India",
+    duration: "August 2019 - May 2023",
+    coursework:
+      "Discrete Structures, Data Structures, Computer Organisation and Architecture, Computer Graphics, Operating System, Database Management System, Computer Network, Theory of Computer Science, Advance Algorithm, Data Warehousing and Mining, Machine Learning, Artificial Intelligence",
+    className: "lg:col-span-5 md:col-span-5 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-start",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
+    degree: "Master of Computer Science",
+    schoolName: "North Carolina State University",
+    location: "Raleigh, NC",
+    duration: "August 2024 - May 2026",
+    coursework:
+      "Design and Analysis of Algorithm, Automated Learning and Data Analytics, Software Engineering, Object Oriented Design and Development, Computer and Network Security, Neural Networks",
+    className: "lg:col-span-5 md:col-span-5 md:row-span-2",
     titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
   },
 ];
 
@@ -224,5 +186,26 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/priya-gandhi-1a54751b2/",
+  },
+];
+
+export const education = [
+  {
+    id: 1,
+    degree: "Master of Computer Science",
+    name: "North Carolina State University",
+    location: "Raleigh, NC",
+    duration: "August 2024 - May 2026",
+    coursework:
+      "Design and Analysis of Algorithm, Automated Learning and Data Analytics, Software Engineering, Object Oriented Design and Development, Computer and Network Security, Neural Networks",
+  },
+  {
+    id: 2,
+    degree: "Bachelor of Technology, Computer Engineering",
+    name: "Dwarkadas J. Sanghvi College of Engineering",
+    location: "Mumbai, India",
+    duration: "August 2019 - May 2023",
+    coursework:
+      "Discrete Structures,Data Structures,Computer Organisation and Architecture,Computer Graphics,Operating System,Database Management System,Computer Network,Theory of Computer Science,Advance Algorithm,Data Warehousing and Mining, Machine Learning, Artificial Intelligence",
   },
 ];
