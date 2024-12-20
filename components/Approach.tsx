@@ -1,13 +1,12 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BackgroundGradientAnimation } from "./ui/GradientBg";
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+
 
 const Approach = () => {
   return (
     <section id="projects" className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">Projects</span>
+        <span className="text-purple">Projects</span>
       </h1>
 
       {/* remove bg-white dark:bg-black */}
@@ -27,31 +26,14 @@ const Approach = () => {
           }
           des="Conceptualized and implemented a solution using the MobileNetV2 CNN model to generate synthetic images for early-stage diagnosis of four neurodegenerative diseases, and co-authored a paper on this solution, which was accepted at the 8th IEEE International Conference for Convergence of Technology 2023(ISSN: 979-8-3503-3401-2)."
         >
-          {/* <CanvasRevealEffect
-            animationSpeed={3}
-            // change bg-black to bg-pink-900
-            containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-            colors={[
-              // change the colors of the
-              [255, 166, 158],
-              [221, 255, 247],
-            ]}
-            dotSize={2}
-          /> */}
-          {/* Radial gradient for the cute fade */}
-          {/* remove this one */}
-          {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+          
         </Card>
         <Card
           title=""
           icon={<AceternityIcon order="Multimodal Single Cell Integration" />}
           des="Devised a solution to predict the modalities like DNA, RNA, and Proteins at single-cell level using Neural Networks. Pre-processed the huge data using SVD dimensionality reduction technique and then using gelu activation function for dense neural layers predicted the covariance of modalities, offering valuable insights for diagnosing various carcinogenic diseases. "
         >
-          {/* <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-            colors={[[125, 211, 252]]}
-          /> */}
+          
         </Card>
         <Card
           title=""
@@ -170,24 +152,6 @@ const AceternityIcon = ({ order }: { order: string }) => {
         </span>
       </button>
     </div>
-    // remove the svg and add the button
-    // <svg
-    //   width="66"
-    //   height="65"
-    //   viewBox="0 0 66 65"
-    //   fill="none"
-    //   xmlns="http://www.w3.org/2000/svg"
-    //   className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
-    // >
-    //   <path
-    //     d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-    //     stroke="currentColor"
-    //     strokeWidth="15"
-    //     strokeMiterlimit="3.86874"
-    //     strokeLinecap="round"
-    //     style={{ mixBlendMode: "darken" }}
-    //   />
-    // </svg>
   );
 };
 

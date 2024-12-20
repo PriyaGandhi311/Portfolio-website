@@ -9,18 +9,6 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    degree: "Bachelor of Technology, Computer Engineering",
-    schoolName: "Dwarkadas J. Sanghvi College of Engineering",
-    location: "Mumbai, India",
-    duration: "August 2019 - May 2023",
-    coursework:
-      "Discrete Structures, Data Structures, Computer Organisation and Architecture, Computer Graphics, Operating System, Database Management System, Computer Network, Theory of Computer Science, Advance Algorithm, Data Warehousing and Mining, Machine Learning, Artificial Intelligence",
-    className: "lg:col-span-5 md:col-span-5 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-  },
-  {
-    id: 2,
     degree: "Master of Computer Science",
     schoolName: "North Carolina State University",
     location: "Raleigh, NC",
@@ -30,106 +18,17 @@ export const gridItems = [
     className: "lg:col-span-5 md:col-span-5 md:row-span-2",
     titleClassName: "justify-start",
   },
-];
-
-export const projects = [
-  {
-    id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
-  },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    degree: "Bachelor of Technology, Computer Engineering",
+    schoolName: "Dwarkadas J. Sanghvi College of Engineering",
+    location: "Mumbai, India",
+    duration: "August 2019 - May 2023",
+    coursework:
+      "Discrete Structures, Data Structures, Computer Organisation and Architecture, Computer Graphics, Operating System, Database Management System, Computer Network, Theory of Computer Science, Advance Algorithm, Data Warehousing and Mining, Machine Learning, Artificial Intelligence",
+    className: "lg:col-span-5 md:col-span-5 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-start",
   },
 ];
 
@@ -187,26 +86,5 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/priya-gandhi-1a54751b2/",
-  },
-];
-
-export const education = [
-  {
-    id: 1,
-    degree: "Master of Computer Science",
-    name: "North Carolina State University",
-    location: "Raleigh, NC",
-    duration: "August 2024 - May 2026",
-    coursework:
-      "Design and Analysis of Algorithm, Automated Learning and Data Analytics, Software Engineering, Object Oriented Design and Development, Computer and Network Security, Neural Networks",
-  },
-  {
-    id: 2,
-    degree: "Bachelor of Technology, Computer Engineering",
-    name: "Dwarkadas J. Sanghvi College of Engineering",
-    location: "Mumbai, India",
-    duration: "August 2019 - May 2023",
-    coursework:
-      "Discrete Structures,Data Structures,Computer Organisation and Architecture,Computer Graphics,Operating System,Database Management System,Computer Network,Theory of Computer Science,Advance Algorithm,Data Warehousing and Mining, Machine Learning, Artificial Intelligence",
   },
 ];

@@ -5,7 +5,6 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { socialMedia } from "@/data";
 
-
 const handleDownload = () => {
   const link = document.createElement("a");
   link.href =
@@ -15,7 +14,7 @@ const handleDownload = () => {
 };
 const Hero = () => {
   return (
-    <div id="about" className="pb-20 pt-36">
+    <div id="about" className="pb-20 pt-36 h-screen">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -61,7 +60,7 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words=" Hi, I'm Priya Gandhi!"
+            words="Hi, I'm Priya Gandhi!"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
