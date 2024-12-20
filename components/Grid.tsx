@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => {
   return (
-    <section id="education">
+    <section id="education" className="w-full py-20">
       <BentoGrid className="w-full py-20">
         <h1 className="heading">
           <span className="text-purple">Education</span>
