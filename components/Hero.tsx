@@ -8,8 +8,8 @@ import { socialMedia } from "@/data";
 const handleDownload = () => {
   const link = document.createElement("a");
   link.href =
-    '"https://drive.google.com/drive/folders/1vv3aqKFzZRYDD2oEB6t7cAhPNqcsNLbV";';
-  link.download = "Priya_Gandhi_Resume.pdf";
+    'https://drive.google.com/drive/folders/1vv3aqKFzZRYDD2oEB6t7cAhPNqcsNLbV';
+  // link.download = "Priya_Gandhi_Resume.pdf";
   link.click();
 };
 const Hero = () => {
