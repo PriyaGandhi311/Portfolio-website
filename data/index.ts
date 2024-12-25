@@ -64,7 +64,7 @@ export const workExperience = [
     id: 4,
     title: "Blockchain Developer ",
     company: "MasterBridge",
-    duration: "June 2021 - Auguat 2021",
+    duration: "June 2021 - August 2021",
     desc: "Built a Decentralized application (dapp) using Truffle that could keep track of the product in supply chain. Composed contracts using Solidity language for Ethereum network in Ganache development environment",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
