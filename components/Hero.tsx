@@ -65,7 +65,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            A dynamic Software Engineer who thrives on collaboration,
+            A dynamic Engineer who thrives on collaboration,
             innovation, and transforming ideas into reality. Currently pursuing
             Masters of Computer Science from North Carolina State University.
           </p>
