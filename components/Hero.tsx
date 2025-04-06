@@ -42,8 +42,6 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10 pt-8">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-         
 
           <div className="flex items-center justify-center -mt-16 mb-4">
             <img
@@ -52,13 +50,15 @@ const Hero = () => {
               className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56"
             />
           </div>
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+  
           <TextGenerateEffect
             words="Hi, I'm Priya Gandhi!"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            A dynamic Engineer who thrives on collaboration,
+            A dynamic engineer who thrives on collaboration,
             innovation, and transforming ideas into reality. Currently pursuing
             Masters of Computer Science from North Carolina State University.
           </p>
