@@ -45,11 +45,11 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
          
 
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex items-center justify-center -mt-16 mb-4">
             <img
               src="/Priya_Gandhi.png"
               alt="Priya Gandhi"
-              className="rounded-full w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52"
+              className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56"
             />
           </div>
           <TextGenerateEffect
