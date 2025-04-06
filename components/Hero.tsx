@@ -41,16 +41,16 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex flex-col justify-center relative my-20 z-10 pt-8">
-        <div className="flex items-center justify-center min-h-screen px-4 pt-12 pb-8">
+      <div className="flex flex-col justify-center relative my-15 z-10 pt-6">
+        
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center">
             <img
               src="/Priya_Gandhi.png"
               alt="Priya Gandhi"
-              className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-4"
+              className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56"
             />
           </div>
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-
           <TextGenerateEffect
             words="Hi, I'm Priya Gandhi!"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
