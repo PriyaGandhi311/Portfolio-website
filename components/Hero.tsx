@@ -41,8 +41,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10 pt-8">
-        <div className="flex items-center justify-center -mt-16 mb-4">
+      <div className="flex flex-col justify-center relative my-20 z-10 pt-8">
+        <div className="flex items-center justify-center mb-4">
             <img
               src="/Priya_Gandhi.png"
               alt="Priya Gandhi"
