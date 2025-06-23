@@ -10,8 +10,21 @@ const Approach = () => {
       </h1>
 
       {/* remove bg-white dark:bg-black */}
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+      {/* <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4"> */}
         {/* add des prop */}
+        <div className=" py-20 grid grid-cols-1 md:grid-cols-3 gap-4 w-full items-stretch justify-items-center">
+        <Card title="" 
+        icon={
+          <AceternityIcon order="Gamified Donation Platform for Social Impact" />
+        }
+        des="Designed and developed a full-stack gamified donation platform using React, TypeScript, Flask, and MongoDB, facilitating seamless connections between donors and receivers engineered with a dynamic leaderboard system to gamify user engagement. Integrated a Gemini API-driven chatbot to improve user support, usability, and real-time assistance for donors and receivers"></Card>
+        <Card title="" 
+        icon={
+          <AceternityIcon order="Banking System in C++" />
+        }
+        des="Developed a command-line banking system in C++ with user authentication and file-based storage, enabling secure account
+access and persistent transaction management. Implemented balance inquiry, deposits, withdrawals, and transfers, incorporating input validation, transaction logic, and error
+handling to ensure secure processing and enforce operational limits"></Card>
         <Card
           title=""
           icon={
@@ -58,7 +71,6 @@ const Card = ({
   title,
   icon,
   children,
-  // add this one for the desc
   des,
 }: {
   title: string;
@@ -76,14 +88,13 @@ const Card = ({
        dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem]  "
       // rounded-3xl
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
+      
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      {/* change to h-10 w-10 , add opacity-30  */}
+      
       <Icon className="absolute h-10 w-10 -top-3 -left-3 dark:text-white text-black opacity-30" />
       <Icon className="absolute h-10 w-10 -bottom-3 -left-3 dark:text-white text-black opacity-30" />
       <Icon className="absolute h-10 w-10 -top-3 -right-3 dark:text-white text-black opacity-30" />
@@ -135,10 +146,6 @@ const Card = ({
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div>
-      {/* this btn is from https://ui.aceternity.com/components/tailwindcss-buttons border magic */}
-      {/* change rounded-lg, text-purple px-5 py-2 */}
-      {/* remove focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cuz we don't need to focus */}
-      {/* remove text-sm font-medium h-12 , add font-bold text-2xl */}
       <button className="relative inline-flex overflow-hidden  p-[1px] ">
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]

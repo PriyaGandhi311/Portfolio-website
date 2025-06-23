@@ -33,7 +33,7 @@ export const BentoGridItem = ({
   spareImg,
   degree,
   schoolName,
-  location,
+  CGPA,
   duration,
   coursework,
 }: {
@@ -46,7 +46,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
   degree?: string;
-  location?: string;
+  CGPA?: string;
   duration?: string;
   schoolName?: string;
   coursework?: string;
@@ -97,7 +97,7 @@ export const BentoGridItem = ({
             {schoolName}
           </div>
           <div className="font-sans test-base max-w-112 fond-italics z-10">
-            {location}
+            {CGPA}
           </div>
 
           <div>{duration}</div>

@@ -13,7 +13,7 @@ const Grid = () => {
             id={item.id}
             key={i}
             schoolName={item.schoolName}
-            location={item.location}
+            CGPA={item.CGPA}
             duration={item.duration}
             description={item.coursework}
           
