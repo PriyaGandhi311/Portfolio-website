@@ -48,17 +48,17 @@ const Hero = () => {
             <img
               src="/Priya_Gandhi.png"
               alt="Priya Gandhi"
-              className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56"
+              className="rounded-full w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72"
             />
           </div>
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
   
           <TextGenerateEffect
             words="Hi, I'm Priya Gandhi!"
-            className="text-center text-[34px] md:text-4xl lg:text-5xl"
+            className="text-center text-[34px] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-base lg:text-xl">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-3xl">
             Software engineer with a knack for turning complex problems into clean, scalable solutions. I build full-stack applications, production data pipelines, and end-to-end CI/CD systems. Currently pursuing my Master&apos;s in Computer Science at North Carolina State University.
           </p>
           <div className="flex items-center md:gap-6 gap-6 ">

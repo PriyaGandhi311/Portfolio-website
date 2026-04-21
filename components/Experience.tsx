@@ -34,13 +34,13 @@ const Experience = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h1 className="text-base font-bold text-white leading-snug">
+                  <h1 className="text-base xl:text-lg 2xl:text-xl font-bold text-white leading-snug">
                     {card.title}
                   </h1>
-                  <p className="text-purple font-semibold text-sm mt-0.5">
+                  <p className="text-purple font-semibold text-sm xl:text-base 2xl:text-lg mt-0.5">
                     {card.company}
                   </p>
-                  <p className="text-white-100 text-xs mt-0.5">{card.duration}</p>
+                  <p className="text-white-100 text-xs xl:text-sm 2xl:text-base mt-0.5">{card.duration}</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ const Experience = () => {
               {/* Highlights below both */}
               <ul className="flex flex-col gap-2">
                 {card.highlights.map((point, i) => (
-                  <li key={i} className="text-xs text-white-100 leading-relaxed before:content-['•'] before:text-purple before:mr-1.5">
+                  <li key={i} className="text-xs xl:text-sm 2xl:text-base text-white-100 leading-relaxed before:content-['•'] before:text-purple before:mr-1.5">
                     {point}
                   </li>
                 ))}

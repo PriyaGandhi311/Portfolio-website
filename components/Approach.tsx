@@ -42,7 +42,7 @@ const Approach = () => {
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer ${
+            className={`px-4 py-2 rounded-full text-sm xl:text-base 2xl:text-lg font-medium border transition-all duration-200 cursor-pointer ${
               activeFilter === filter
                 ? "bg-purple-600 text-white border-purple-600 shadow-md shadow-purple-500/20"
                 : "border-purple-300 dark:border-purple-700 text-purple-600 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 bg-transparent"
@@ -137,12 +137,12 @@ const ProjectCard = ({ project }: { project: (typeof projects)[number] }) => {
       </div>
 
       {/* Title */}
-      <h3 className="text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-snug">
+      <h3 className="text-base md:text-lg xl:text-xl 2xl:text-2xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">
         {project.title}
       </h3>
 
       {/* Description */}
-      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow mb-4">
+      <p className="text-xs md:text-sm xl:text-base 2xl:text-lg text-gray-600 dark:text-gray-400 leading-relaxed flex-grow mb-4">
         {project.description}
       </p>
 
