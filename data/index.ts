@@ -88,3 +88,133 @@ export const socialMedia = [
     link: "https://www.linkedin.com/in/priya-gandhi-1a54751b2/",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Prompter - AI Meeting Copilot",
+    description:
+      "Full-stack Next.js 14 meeting assistant that transcribes live audio via Groq Whisper and streams structured LLM suggestions (questions, fact-checks, talking points) token-by-token using LLaMA 3.3 70B.",
+    categories: ["Full-Stack", "AI/ML"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Groq API",
+      "Whisper",
+      "LLaMA 3.3",
+      "Tailwind CSS",
+      "MediaRecorder API",
+    ],
+    githubLink: "https://github.com/PriyaGandhi311/prompter",
+  },
+  {
+    id: 2,
+    title: "PaperStack - Production-Ready RAG Platform",
+    description:
+      "Production-grade RAG platform with FastAPI microservices (Backend, Embedding, RAG) enabling scalable document retrieval and LLM inference, with a full CI/CD pipeline including security scanning (Gitleaks, CodeQL) and Docker image signing via Cosign.",
+    categories: ["AI/ML", "DevOps"],
+    technologies: [
+      "FastAPI",
+      "Python",
+      "Docker",
+      "PostgreSQL",
+      "GitHub Actions",
+      "Ansible",
+      "Pytest",
+      "Cosign",
+      "CodeQL",
+    ],
+    githubLink: null,
+  },
+  {
+    id: 3,
+    title: "Leetcode Chrome Extension",
+    description:
+      "Chrome extension with a React + TypeScript frontend and FastAPI backend that reinforces problem-solving retention through spaced-repetition email reminders, backed by Celery/Redis async task processing and a cloud-hosted PostgreSQL database.",
+    categories: ["Full-Stack", "DevOps"],
+    technologies: ["React", "TypeScript", "FastAPI", "Celery", "Redis", "PostgreSQL", "Python"],
+    githubLink: "https://github.com/PriyaGandhi311/leetcode-chrome-extension",
+  },
+  {
+    id: 4,
+    title: "Gamified Donation Platform for Social Impact",
+    description:
+      "Full-stack donation platform built with React, Node.js, and MongoDB, featuring a dynamic leaderboard system that gamifies donor engagement and a Gemini API-powered support agent providing real-time assistance.",
+    categories: ["Full-Stack", "AI/ML"],
+    technologies: ["React", "JavaScript", "Node.js", "MongoDB", "Gemini API"],
+    githubLink: "https://github.com/PriyaGandhi311/PhantomPack",
+  },
+  {
+    id: 5,
+    title: "TrendTube Microservices Platform",
+    description:
+      "Modular video analytics platform in Java Spring Boot with RESTful APIs, RabbitMQ event-driven async processing, and gRPC for low-latency binary communication between upload and processing services.",
+    categories: ["Full-Stack", "Systems"],
+    technologies: ["Java", "Spring Boot", "RabbitMQ", "gRPC", "MySQL", "REST APIs", "Swagger UI"],
+    githubLink: "https://github.com/PriyaGandhi311/TrendTube",
+  },
+  {
+    id: 6,
+    title: "Movie Ticketing System",
+    description:
+      "MVC-based movie ticketing app in Ruby on Rails with role-based authentication for admins and regular users, and a Cucumber + Capybara automated test suite covering end-to-end user flows.",
+    categories: ["Full-Stack"],
+    technologies: ["Ruby on Rails", "MVC", "Cucumber", "Capybara", "Authentication"],
+    githubLink: null,
+  },
+  {
+    id: 7,
+    title: "Sparkify Music Data Warehouse ETL",
+    description:
+      "Apache Airflow pipeline for hourly ingestion of music event logs from Amazon S3 into a Redshift data warehouse, modeled as a dimensional star schema with optimized fact and dimension tables for large-scale analytical queries.",
+    categories: ["Data Engineering", "DevOps"],
+    technologies: ["Apache Airflow", "Amazon S3", "Amazon Redshift", "Python", "SQL", "Star Schema"],
+    githubLink: null,
+  },
+  {
+    id: 8,
+    title: "Log Forge",
+    description:
+      "Python-based Linux system inspection and logging pipeline using psutil and SQLite to simulate automated test environments, with a Streamlit dashboard for real-time metric visualization and reproducible test reporting across containerized setups.",
+    categories: ["Data Engineering", "DevOps"],
+    technologies: ["Python", "psutil", "SQLite", "Streamlit", "Linux", "Docker"],
+    githubLink: "https://github.com/PriyaGandhi311/LogForge",
+  },
+  {
+    id: 9,
+    title: "DistLogZip - Distributed Log Compression",
+    description:
+      "C++ distributed log compression system using dictionary-based and cluster-guided parsing to reduce storage overhead, with selective decompression enabling fast, targeted log retrieval across worker nodes at scale.",
+    categories: ["Data Engineering", "Systems"],
+    technologies: ["C++", "Distributed Systems", "Dictionary Encoding", "Cluster Parsing"],
+    githubLink: null,
+  },
+  {
+    id: 10,
+    title: "AI Web Scraper",
+    description:
+      "Web scraper using Python, BeautifulSoup, and Selenium to extract structured data from dynamic websites, integrated with LangChain and a local LLaMA model to automatically summarize and classify scraped content.",
+    categories: ["AI/ML"],
+    technologies: ["Python", "BeautifulSoup", "Selenium", "LangChain", "LLaMA"],
+    githubLink: "https://github.com/PriyaGandhi311/AI-webScraper",
+  },
+  {
+    id: 11,
+    title: "Banking System in C++",
+    description:
+      "Command-line banking system in C++ with encryption-backed user authentication, file-based persistence, and full transaction logic including deposits, withdrawals, transfers, input validation, and error handling.",
+    categories: ["Systems"],
+    technologies: ["C++", "File I/O", "Encryption", "Data Structures"],
+    githubLink: "https://github.com/PriyaGandhi311/Banking-System",
+  },
+  {
+    id: 12,
+    title: "Multimodal Single Cell Integration",
+    description:
+      "Neural network pipeline for cross-modal consistency validation across DNA, RNA, and protein data at the single-cell level, evaluating SVD dimensionality reduction and activation functions on high-dimensional biological datasets.",
+    categories: ["AI/ML"],
+    technologies: ["Python", "Neural Networks", "SVD", "Keras", "Bioinformatics"],
+    githubLink: null,
+  },
+];

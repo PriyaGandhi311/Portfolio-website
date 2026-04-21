@@ -1,179 +1,162 @@
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+"use client";
 
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaLock } from "react-icons/fa";
+import { projects } from "@/data";
+
+type Category = "All" | "Full-Stack" | "AI/ML" | "DevOps" | "Data Engineering" | "Systems";
+
+const FILTERS: Category[] = ["All", "Full-Stack", "AI/ML", "DevOps", "Data Engineering", "Systems"];
+
+const CATEGORY_STYLES: Record<string, string> = {
+  "Full-Stack":
+    "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700/50",
+  "AI/ML":
+    "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700/50",
+  DevOps:
+    "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-700/50",
+  "Data Engineering":
+    "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-700/50",
+  Systems:
+    "bg-slate-100 dark:bg-slate-700/30 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600/50",
+};
 
 const Approach = () => {
+  const [activeFilter, setActiveFilter] = useState<Category>("All");
+
+  const filtered =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.categories.includes(activeFilter));
+
   return (
-    <section id="projects" className="w-full py-20">
+    <section id="projects" className="w-full py-12 md:py-16 lg:py-20">
       <h1 className="heading">
-        <span className="text-purple">Projects</span>
+        My <span className="text-purple">Projects</span>
       </h1>
 
-      {/* remove bg-white dark:bg-black */}
-      {/* <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4"> */}
-        {/* add des prop */}
-        <div className=" py-20 grid grid-cols-1 md:grid-cols-3 gap-4 w-full items-stretch justify-items-center">
-        <Card title="" 
-        icon={
-          <AceternityIcon order="Gamified Donation Platform for Social Impact" />
-        }
-        des="Designed and developed a full-stack gamified donation platform using React, TypeScript, Flask, and MongoDB, facilitating seamless connections between donors and receivers engineered with a dynamic leaderboard system to gamify user engagement. Integrated a Gemini API-driven chatbot to improve user support, usability, and real-time assistance for donors and receivers"></Card>
-        <Card title="" 
-        icon={
-          <AceternityIcon order="Banking System in C++" />
-        }
-        des="Developed a command-line banking system in C++ with user authentication and file-based storage, enabling secure account
-access and persistent transaction management. Implemented balance inquiry, deposits, withdrawals, and transfers, incorporating input validation, transaction logic, and error
-handling to ensure secure processing and enforce operational limits"></Card>
-        <Card
-          title=""
-          icon={
-            <AceternityIcon order="Text representation Impact on ML for Stress Detection in Social Media" />
-          }
-          des="Social media platforms like Twitter, Facebook, and Instagram reveal insights into users' mental health due to the anonymity of online interactions. This project examines the effectiveness of TF-IDF and Bag-of-Words (BoW) for stress detection in textual data. Various machine learning algorithms and deep learning models—SVM, Random Forest, Logistic Regression, Naive Bayes, RNN, LSTM, RoBERTa, and BERT embeddings are evaluated using datasets from Reddit and Twitter. The project aims to optimize stress detection systems by assessing how TF-IDF and BoW impact classifier performance."
-        ></Card>
-        <Card
-          title=""
-          icon={
-            <AceternityIcon order="Neurodegenerative Disease Detection using Deep Convolutional GANs and CNN" />
-          }
-          des="Conceptualized and implemented a solution using the MobileNetV2 CNN model to generate synthetic images for early-stage diagnosis of four neurodegenerative diseases, and co-authored a paper on this solution, which was accepted at the 8th IEEE International Conference for Convergence of Technology 2023(ISSN: 979-8-3503-3401-2)."
-        >
-          
-        </Card>
-        <Card
-          title=""
-          icon={<AceternityIcon order="Multimodal Single Cell Integration" />}
-          des="Devised a solution to predict the modalities like DNA, RNA, and Proteins at single-cell level using Neural Networks. Pre-processed the huge data using SVD dimensionality reduction technique and then using gelu activation function for dense neural layers predicted the covariance of modalities, offering valuable insights for diagnosing various carcinogenic diseases. "
-        >
-          
-        </Card>
-        <Card
-          title=""
-          icon={
-            <AceternityIcon order="Quick Response Coding Approach for drug traceability" />
-          }
-          des="Proposed an algorithm in Solidity language for the simplified
-          traceability of drug and other medicinal products in the supply chain.
-          Authored a chapter for the simplified traceability of drug and other
-          medicinal products in the supply chain in the book titled “Unleashing
-          Potentials of Blockchain Technology for Healthcare Industries”
-          published by Elsevier with Scopus index and ISBN: 978-0-323-99481-1"
-        ></Card>
+      {/* Filter Bar */}
+      <div className="flex flex-wrap justify-center gap-2 mt-8 md:mt-10 mb-10 md:mb-12">
+        {FILTERS.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer ${
+              activeFilter === filter
+                ? "bg-purple-600 text-white border-purple-600 shadow-md shadow-purple-500/20"
+                : "border-purple-300 dark:border-purple-700 text-purple-600 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 bg-transparent"
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
       </div>
+
+      {/* Projects Grid */}
+      <motion.div
+        layout
+        className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
+      >
+        <AnimatePresence mode="popLayout">
+          {filtered.map((project) => (
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+              className="h-full"
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </section>
   );
 };
 
 export default Approach;
 
-const Card = ({
-  title,
-  icon,
-  children,
-  des,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  children?: React.ReactNode;
-  des: string;
-}) => {
-  const [hovered, setHovered] = React.useState(false);
+const ProjectCard = ({ project }: { project: (typeof projects)[number] }) => {
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      // change h-[30rem] to h-[35rem], add rounded-3xl
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem]  "
-      // rounded-3xl
-      style={{
-      
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
+      className="
+        flex flex-col h-full p-5 md:p-6 rounded-2xl border
+        bg-white dark:bg-gradient-to-br dark:from-[rgb(4,7,29)] dark:to-[rgb(12,14,35)]
+        border-gray-200 dark:border-slate-800
+        hover:border-purple-300 dark:hover:border-purple-700
+        hover:shadow-lg hover:shadow-purple-500/10
+        transition-all duration-300
+      "
     >
-      
-      <Icon className="absolute h-10 w-10 -top-3 -left-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-3 -right-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -right-3 dark:text-white text-black opacity-30" />
-
-      <AnimatePresence>
-        {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="relative z-20 px-10">
-        <div
-          // add this for making it center
-          // absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
-          className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
-        >
-          {icon}
+      {/* Top row: category badges + github button */}
+      <div className="flex items-start justify-between gap-3 mb-4">
+        <div className="flex flex-wrap gap-1.5">
+          {project.categories.map((cat) => (
+            <span
+              key={cat}
+              className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${CATEGORY_STYLES[cat]}`}
+            >
+              {cat}
+            </span>
+          ))}
         </div>
-        <h2
-          // change text-3xl, add text-center
-          className="dark:text-white text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
-         group-hover/canvas-card:-translate-y-2 transition duration-200"
-        >
-          {title}
-        </h2>
-        {/* add this one for the description */}
-        <p
-          className="text-sm opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 mt-4 group-hover/canvas-card:text-white text-center
-         group-hover/canvas-card:-translate-y-2 transition duration-200"
-          style={{ color: "#E4ECFF" }}
-        >
-          {des}
-        </p>
+
+        {project.githubLink ? (
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              flex items-center gap-1.5 px-3 py-1.5 shrink-0
+              bg-gray-900 dark:bg-gray-800 hover:bg-gray-700 dark:hover:bg-gray-700
+              text-white rounded-lg text-xs font-medium
+              transition-colors duration-200
+            "
+          >
+            <FaGithub className="w-3.5 h-3.5" />
+            Code
+          </a>
+        ) : (
+          <span
+            className="
+              flex items-center gap-1.5 px-3 py-1.5 shrink-0
+              bg-gray-100 dark:bg-gray-800/40
+              text-gray-400 dark:text-gray-500
+              rounded-lg text-xs font-medium cursor-not-allowed
+            "
+            title="No public repository"
+          >
+            <FaLock className="w-3 h-3" />
+            Private
+          </span>
+        )}
+      </div>
+
+      {/* Title */}
+      <h3 className="text-base md:text-lg font-bold text-gray-900 dark:text-white mb-2 leading-snug">
+        {project.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow mb-4">
+        {project.description}
+      </p>
+
+      {/* Tech tags */}
+      <div className="flex flex-wrap gap-1.5 mt-auto pt-2 border-t border-gray-100 dark:border-slate-800/60">
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="px-2 py-0.5 text-xs bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full border border-purple-200 dark:border-purple-800/50"
+          >
+            {tech}
+          </span>
+        ))}
       </div>
     </div>
-  );
-};
-// add order prop for the Phase number change
-const AceternityIcon = ({ order }: { order: string }) => {
-  return (
-    <div>
-      <button className="relative inline-flex overflow-hidden  p-[1px] ">
-        <span
-          className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
-         bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-        />
-        <span
-          className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center  bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-lg"
-        >
-          {order}
-        </span>
-      </button>
-    </div>
-  );
-};
-
-export const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
   );
 };
