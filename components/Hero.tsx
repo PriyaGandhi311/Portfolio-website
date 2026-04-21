@@ -14,7 +14,7 @@ const handleDownload = () => {
 };
 const Hero = () => {
   return (
-    <div id="about" className="pb-20 pt-36 h-screen">
+    <div id="about" className="pb-20 pt-36 min-h-screen">
      
       <div>
         <Spotlight
@@ -55,13 +55,11 @@ const Hero = () => {
   
           <TextGenerateEffect
             words="Hi, I'm Priya Gandhi!"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[34px] md:text-4xl lg:text-5xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            A dynamic engineer who thrives on collaboration,
-            innovation, and transforming ideas into reality. Currently pursuing
-            Masters of Computer Science from North Carolina State University.
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-base lg:text-xl">
+            Software engineer with a knack for turning complex problems into clean, scalable solutions. I build full-stack applications, production data pipelines, and end-to-end CI/CD systems. Currently pursuing my Master&apos;s in Computer Science at North Carolina State University.
           </p>
           <div className="flex items-center md:gap-6 gap-6 ">
             {socialMedia.map((info) => (

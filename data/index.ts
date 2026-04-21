@@ -35,40 +35,49 @@ export const gridItems = [
 export const workExperience = [
   {
     id: 1,
-    title: "Software Developer ",
+    title: "Software Developer Intern",
     company: "LexisNexis",
-    duration: "June 2025 - Present",
-    desc: "Working on Lexis+ AI, a generative AI product that enhances legal research. I contribute across the frontend and backend, using Angular with microfrontend architecture (module federation) for scalable, high-performance UIs, and C# with a Model-View architecture on the backend to build robust, maintainable services — all to deliver a seamless, responsive user experience.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    duration: "June 2025 - August 2025",
+    highlights: [
+      "Shipped a GenAI-driven solution analysis feature via microfrontend architecture (Angular, TypeScript, C# .NET), eliminating 100% of manual evaluations",
+      "Implemented CI/CD pipelines with A/B testing, Jenkins, and Azure DevOps for blue-green deployments with zero downtime for 12,000+ users",
+    ],
+    thumbnail: "/LexisNexis.png",
   },
   {
     id: 2,
-    title: "Business Technology Solution Associates",
+    title: "Solutions Engineer",
     company: "ZS Associates",
     duration: "September 2023 - July 2024",
-    desc: "Leveraged Salesforce Management Cloud, AWS S3, Zaidyn(internal software), and HDFS to generate key insights, enhancing operations of 6 brands across 5 European countries by 63% for a multinational pharmaceutical client. Automated the Data Quality Management (DQM) process with Python, PySpark, Hive, HDFS and SQL, achieving a 27% reduction in overall runtime saving 4 hours of team effort per week.Collaborated with Accenture and other cross-functional teams to streamline data processing and engaged in User Acceptance Testing (UAT), achieving 100% sign-off indicating client satisfaction.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    highlights: [
+      "Integrated Salesforce Marketing Cloud with AWS S3 and HDFS across 6 brands in 5 European markets, increasing daily processing efficiency by 63%",
+      "Built a distributed data validation pipeline (Python, PySpark, Hive, SQL), reducing validation runtime by 27% and saving 7 hours of manual work weekly",
+      "Directed UAT with cross-functional teams, securing 100% client sign-off for production rollout",
+    ],
+    thumbnail: "/ZSAssociates.png",
   },
   {
     id: 3,
-    title: "Software Developer",
+    title: "Software Developer Intern",
     company: "ICICI Lombard",
     duration: "June 2023 - August 2023",
-    desc: "Created APIs for NYSA, a motor insurance product, utilizing .NET to retrieve data from the government's motor database, and architected a user-friendly front end using TypeScript and AngularJS, resulting in a 24% increase in revenue generated.",
-    className: "md:col-span-2", 
-    thumbnail: "/exp2.svg",
+    highlights: [
+      "Built and integrated REST APIs for NYSA, a motor insurance product, using .NET to retrieve and serve real-time vehicle data from government motor databases",
+      "Designed and architected the full customer-facing frontend using TypeScript and AngularJS, delivering a seamless user experience and driving a 24% increase in product revenue",
+    ],
+    thumbnail: "/ICICI.png",
   },
   {
     id: 4,
-    title: "Software Developer",
+    title: "Software Developer Intern",
     company: "JP Morgan Chase & Co",
     duration: "June 2022 - July 2022",
-    desc: "Utilizing cloud technologies like AWS's Apache Kafka and Kubernetes orchestration to implement checkpointing on data streams significantly enhanced the speed and efficiency of real-time data transfer by 30%. Developed unit test cases using Java programming language's JUnit and Mockito frameworks to assess the functionality of the code implemented in Spring Boot, a data streaming application attaining above 90% test case coverage",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  }
+    highlights: [
+      "Architected checkpointing for distributed data streams using Apache Kafka and Kubernetes, boosting throughput by 30% and cutting latency by 170ms",
+      "Achieved 96% code coverage with JUnit and Mockito unit tests for a Spring Boot data streaming application",
+    ],
+    thumbnail: "/JPMC.jpg",
+  },
 ];
 
 export const socialMedia = [
